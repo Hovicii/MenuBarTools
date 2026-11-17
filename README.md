@@ -26,7 +26,16 @@ Click the **⊞ icon** in the menu bar for:
 - Build: **Xcode Command Line Tools** (`xcode-select --install`)
 - (Optional) display rotation/layout: `brew install displayplacer`
 
-## Build & Install
+## Install with Homebrew (recommended — no Gatekeeper block)
+```bash
+brew tap hovicii/tap
+brew trust hovicii/tap
+brew install --cask --no-quarantine hovicii/tap/menubartools
+```
+`--no-quarantine` installs the unsigned app without the "cannot verify malware" warning.
+Update: `brew upgrade --cask menubartools` · Uninstall: `brew uninstall --cask menubartools`
+
+## Build & Install (from source)
 ```bash
 git clone https://github.com/Hovicii/MenuBarTools.git
 cd MenuBarTools
@@ -88,7 +97,16 @@ Dock 아이콘 없이 메뉴바에만 떠 있습니다 (단일 Swift 파일, 의
 - 빌드: **Xcode Command Line Tools** (`xcode-select --install`)
 - (선택) 디스플레이 회전/배치: `brew install displayplacer`
 
-## 빌드 & 설치
+## Homebrew로 설치 (권장 — Gatekeeper 차단 없음)
+```bash
+brew tap hovicii/tap
+brew trust hovicii/tap
+brew install --cask --no-quarantine hovicii/tap/menubartools
+```
+`--no-quarantine` 덕분에 "악성 코드가 없음을 확인할 수 없습니다" 경고 없이 미서명 앱이 설치됩니다.
+업데이트: `brew upgrade --cask menubartools` · 삭제: `brew uninstall --cask menubartools`
+
+## 빌드 & 설치 (소스에서)
 ```bash
 git clone https://github.com/Hovicii/MenuBarTools.git
 cd MenuBarTools
